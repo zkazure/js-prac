@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping list</title>
+    <style>
+    .speacial {
+        font-style: italic;
+    }
+    li.speacial{
+        text-transform: uppercase;
+    }
+    #purchase {
+        border: 1px solid white;
+        background-color: #333;
+        color: #ccc;
+        padding: 1em;
+    }
+    #purchase li {
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1 class="speacial">What to buy</h1>
+    <p title="a gentle reminder">Don't forget to buy this stuff.</p>
+    <ul id="purchase">
+        <li>A tin of beans</li>
+        <!-- what is function of the class in the li -->
+    </ul>
+    <ul>
+        <li class="speacial">Cheese</li>
+        <li class="not">not</li>
+        <li class="not speacial">not speacial</li>
+    </ul>
+    <p>This is null</p>
+    <script>
+        var paras = document.getElementsByTagName('p'); // find all the p tag
+        for (var i = 0; i < paras.length; i++) {
+            var title_text = paras[i].getAttribute('title'); // filter the p tag with title
+            if (title_text) {
+                paras[i].setAttribute("title", "brand new title"); // change the title
+                var new_title = paras[i].getAttribute('title');
+                alert(new_title); 
+            }
+
+        }
+        alert(paras.length); // the length is to find the number of the p tag
+    </script>
+</body>
+</html>

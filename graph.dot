@@ -1,0 +1,6 @@
+graph G {
+    html -- { head body }
+    head -- { meta title }
+    body -- { h1 p ul }
+    ul -- { li1[label="li"] li2[label="li"] li3[label="li"] }
+}

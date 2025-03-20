@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="styles/layout.css" media="screen" />
+    </head>
+    <body>
+        <h1>Snapshots</h1>
+        <p id="description">Choose an image. </p>
+        <ul>
+            <a href="https://www.example.com" onclick="return false;" > click me </a>
+            <li>
+                <a href="images/IMG20250128032749.jpg" onclick="showPic(this); return false;" title="image1">Image 1</a>
+            </li>
+            <li>
+                <a href="images/IMG20250128032921.jpg" onclick="showPic(this); return false;" title="image2">Image 2</a>
+            </li>
+            <li>
+                <a href="images/IMG20250128070856.jpg" onclick="showPic(this); return false;" title="image3">Image 3</a>
+            </li>
+            <img id="placeholder" src="images/laugh_duck.gif" alt="my image gallery">
+        </ul>
+        <script src="script/showPic.js"></script>
+        <!-- <script>window.onload = countBodyChildren; </script> -->
+         <script>
+            alert(description.nodeValue);
+            alert(description.childNodes[0].nodeValue);
+            
+            alert(description.firstChild.nodeValue);
+            alert(description.lastChild.nodeValue);
+            alert(description.childNodes[node.childNodes.length-1].nodeValue);
+         </script>
+    </body>
+</html>
