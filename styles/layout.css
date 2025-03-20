@@ -29,6 +29,7 @@ img {
 
 code {
     background: hsl(220, 80%, 90%);
+    font-size: large;
 }
 
 pre {
