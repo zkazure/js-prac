@@ -14,14 +14,48 @@
     </head>
     <body>
         <ul>
-            <a href="https://www.google.com" " >
-                the most simple one <br>
-                <code>
-                &lta href="https://www.google.com" " &gt write with windows.open&lt/a&gt
-                </code><br>
-            </a>
+        <h1> ----------------------------------- </h1>
+            <a href="https://www.google.com" " > the most simple one  </a> <br>
 
-            <a href="https://www.google.com" " > write with windows.open</a>
+            <code>
+            &lta href="https://www.google.com" " &gt write with windows.open&lt/a&gt
+            </code> <br>
+            然而这样会导致不支持这个协议的浏览器打开失败，支持但是禁用了的浏览器什么都不做。<br>
+
+        <h1> ----------------------------------- </h1>
+
+            <a href="#" onclick="popUp('http://www.google.com/');
+                     return false;" > open with the windows.open </a> <br>
+
+            <code>
+            &lta href="#" onclick="popUp('http://www.google.com/');
+                     return false;" &gt open with the windows.open &lt/a&gt <br /><br>
+
+            function popUp(winURL) {
+                window.open(winURL, "popup", "width=320, height=480");
+            }
+            </code>
+
+        <h1> ----------------------------------- </h1>
+            <a href="https://www.google.com"
+               onclick="popUp(this.getAttribute('href'));
+               return false;"> the best one</a> <br>
+
+            <code>
+            &lta href="https://www.google.com"
+               onclick="popUp(this.getAttribute('href'));
+               return false;"> the best one&lt/a&gt
+            </code> <br>
+
+            <a href="https://www.google.com"
+               onclick="popUp(this.href);
+               return false;"> the best two</a> <br>
+            <code>
+            &lta href="https://www.google.com"
+               onclick="popUp(this.href);
+               return false;"&gt the best two&lt/a&gt
+            </code> <br>
+
         </ul>
         <!--[if lt IE 8]>
             <p class="browserupgrade">
@@ -32,9 +66,11 @@
         <![endif]-->
 
         <script type="text/javascript">
+
          function popUp(winURL) {
-             windows.open(winURL, "popop" "width=320, height=480");
+             window.open(winURL, "popup", "width=320, height=480");
          }
+
         </script>
 
     </body>
